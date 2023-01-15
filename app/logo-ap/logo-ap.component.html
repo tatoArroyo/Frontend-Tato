@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../assets/img/programo3.png" id="Programo3">
+</div>
+            <div class="redes">
+                <a href="/login"><img src="../../assets/img/instagram.jpg" id="instagram"></a>
+                <a href="/login"><img src="../../assets/img/facebook.png" id="facebook"></a>
+                <a href="/login"><img src="../../assets/img/linkedin.png" id="linkedin"></a> 
+                <button type="button" class="btn btn-outline-light"(click)="login()" *ngIf="!isLogged">INGRESO</button>
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+            </div>
+
+        </div>
+    </div>
+

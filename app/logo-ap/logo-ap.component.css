@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.redes{
+    margin-right: 0.5em;
+}
+
+#Programo3{
+    width: 200px;
+}
+img{
+    width: 30px;
+}
+
+

@@ -1,0 +1,41 @@
+<div class="row">
+    <h2>Estudio</h2>
+    <div class="col-lg-2">
+  <button type="button" class="btn btn-dark" routerLink="/nuevoestu" *ngIf="isLogged">
+            Nuevo Estudio
+       </button>
+      
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Estudio of estudio">
+            <td>{{Estudio.nombreE}}</td>
+            <td>{{Estudio.descripcionE}}</td>
+            <td>{{Estudio.inicio}}</td>
+            <td>{{Estudio.fin}}</td>
+            <td>{{Estudio.titulo}}</td>
+           </tr>
+           <td *ngIf="isLogged">
+            <button class="btn btn-light"><i class="bi bi-pencil-fill" routerLink="editestu"></i>EDITAR</button>
+            </td>
+            <td *ngIf="isLogged">
+            <button class="btn btn-dark" (click)="delete"><i class="bi bi-trash-fill"></i>BORRAR</button>
+            </td>
+
+
+            </tbody>
+            </table>
+            </div>
+            </div>
+    
+    
+            <!--<div class="campo"> 
+                <!--<button class="btn btn-ligh" (click)="delete"><i data-fa-symbol="delete" class="fas fa-trash fa-fw" *ngIf="isLogged"></i>BORRAR</button>
+                <button class=" btn btn-danger"><i data-fa-symbol="edit" class="fas fa-pencil fa-fw" *ngIf="isLogged"></i>EDITAR</button>
+            </div>-->
+
+            <!--<button class="btn btn-danger"><i data-fa-symbol="edit "class="bi bi-pencil-fill" routerLink="/editestu" *ngIf="isLogged"></i>EDITAR</button>
+            <button class="btn btn-light"><i data-fa-symbol="delete" class="fas fa-trash fa-fw" *ngIf="isLogged"></i>BORRAR</button>
+        </div>-->

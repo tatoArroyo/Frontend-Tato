@@ -1,0 +1,21 @@
+<<div class="container" *ngIf="skill">
+    <div class="row">
+    <div>
+        
+    <form (ngSubmit)="onUpdate" novalidate #f="ngForm">
+      <div class="form-group">
+          <label for="habilidades">Habilidades </label>
+          <input type="text" class="form-control" id="habilidades" name="habilidades" [(ngModel)]="skill.habilidades" name="skill.habilidad" required/>
+      </div>
+      <div class="form-group">
+          <label for="porcentaje">Porcentaje</label>
+          <input type="number" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" name="skill.porcentaje" required/>
+      </div>
+      
+        <button class="btn btn-primary">
+            Actualizar Habilidad
+        </button>
+       </form>
+    </div>
+    </div>
+

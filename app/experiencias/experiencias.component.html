@@ -1,0 +1,38 @@
+<div class="row">
+    <h2>Experiencia Laboral</h2>
+    <div class="col-lg-2">
+  <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+       </button>
+      
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencias of expe">
+            <td>{{Experiencias.nombreE}}</td>
+            <td>{{Experiencias.descripcionE}}</td>
+            <td>{{Experiencias.inicio}}</td>
+            <td>{{Experiencias.fin}}</td>
+            <td>{{Experiencias.puesto}}</td>
+            </tr>
+       <td *ngIf="isLogged">
+            <button class="btn btn-light"><i class="bi bi-pencil-fill" routerLink="editexp"></i>EDITAR</button>
+            </td>
+            <td *ngIf="isLogged">
+            <button class="btn btn-dark" (click)="delete"><i class="bi bi-trash-fill"></i>BORRAR</button>
+            </td>
+    
+            </tbody>
+</table>
+            </div>
+    
+            <!--<div class="campo"> 
+                <!--<button class="btn btn-ligh" (click)="delete"><i data-fa-symbol="delete" class="fas fa-trash fa-fw" *ngIf="isLogged"></i>BORRAR</button>
+                <button class=" btn btn-danger"><i data-fa-symbol="edit" class="fas fa-pencil fa-fw" *ngIf="isLogged"></i>EDITAR</button>
+            </div>-->
+
+            <!--<button class="btn btn-danger"><i data-fa-symbol="edit "class="bi bi-pencil-fill" routerLink="/editexp" *ngIf="isLogged"></i>EDITAR</button>
+            <button class="btn btn-light"><i data-fa-symbol="delete" class="fas fa-trash fa-fw"(click)="delete" *ngIf="isLogged"></i>BORRAR</button>
+            </div>-->   
